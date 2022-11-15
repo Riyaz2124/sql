@@ -1,0 +1,31 @@
+
+CREATE TABLE STUDENT (
+    stdid number(5),
+    stdname varchar2(20),
+    dob date,
+    created_by datetime,
+    updated_at datetime,
+    gender char
+);
+INSERT INTO STUDENT (
+    stdid, stdname, dob, created_by, updated_at, gender
+)
+VALUES (1, 'SHAREEF', '20-jan-2001', '25-oct-2001', 10000, 'M');
+
+INSERT INTO STUDENT (
+    stdid, stdname, dob, created_by, updated_at, gender
+)
+VALUES (2, 'NADEEM', '17-nov-2019', '26-oct-2001', 11000, 'M');
+ALTER TABLE STUDENT RENAME TO STUDENT_INFO;
+
+
+CREATE TABLE student (
+id int
+stdid INT FOREIGN KEY,
+stdname VARCHAR(100)  ,
+dob date ,
+created_by datetime,
+updated_at datetime,
+gender char      
+FOREIGN KEY (stdid) REFERENCES stdid (stdid)
+);
